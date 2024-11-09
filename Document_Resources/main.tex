@@ -1,0 +1,118 @@
+\documentclass[journal]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,english]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{cite}   % Para manejo de referencias
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage[dvipsnames,x11names]{xcolor}
+
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+
+\tikzset{
+  startstop/.style = {rectangle, rounded corners, minimum width=2.5cm, minimum height=0.8cm, text centered, draw=black, fill=gray!20},
+  process/.style   = {rectangle, minimum width=2.5cm, minimum height=0.8cm, text centered, draw=black, fill=blue!10},
+  decision/.style  = {diamond, aspect=2, text centered, draw=black, fill=green!20},
+  arrow/.style     = {thick, ->, >=Stealth}
+}
+
+\lstset{
+    language=Python,               % Lenguaje del código
+    basicstyle=\ttfamily\small,    % Estilo básico del texto
+    keywordstyle=\color{OliveGreen},     % Color para palabras clave
+    stringstyle=\color{BrickRed},       % Color para cadenas
+    commentstyle=\color{PineGreen},% Color para comentarios
+    breaklines=true,               % Cortar líneas largas
+    numberstyle=\tiny\color{gray}, % Estilo de los números
+    showstringspaces=false,
+    frame=lines,
+    rulecolor= \color{gray},      % No mostrar espacios en cadenas
+    literate=   
+        {á}{{\'a}}1
+        {é}{{\'e}}1
+        {í}{{\'i}}1
+        {ó}{{\'o}}1
+        {ú}{{\'u}}1
+        {ñ}{{\~n}}1
+        {Á}{{\'A}}1
+        {É}{{\'E}}1
+        {Í}{{\'I}}1
+        {Ó}{{\'O}}1
+        {Ú}{{\'U}}1
+        {Ñ}{{\~N}}1
+}
+
+% Título y autores
+\title{Investigación y Aplicación de la Red Neuronal Artificial: LeNet}
+\author{John Sebastián Galindo Hernández, Miguel Ángel Moreno Beltrán}
+
+\begin{document}
+
+\maketitle
+
+% Abstract en inglés
+\selectlanguage{english}
+\begin{abstract}
+The objective of this lab is to research the basics of deep learning
+and convolutional neural networks (CNN) with a focus on the leNet neural
+network and its actual application.
+The LeNet network was proposed by Yann LeCun in 1998 and has been used
+in applications of handwritten digit recognition, such as the MNIST dataset.
+In this lab, a database of images known as SHVN is used, which contains
+street houses numbers images. The results has the main porpouse of evaluate
+the strengths and limitations of the LeNet network in its prediction capacity
+when a number is read by camera.
+\end{abstract}
+
+% Resumen en español
+\selectlanguage{spanish}
+\begin{abstract}
+El objetivo de este laboratorio es investigar las bases del deep learning
+y las redes neuronales convolucionales (CNN) con un enfoque en la red neuronal
+LeNet y su aplicacion en la actualidad. 
+La red LeNet fue propuesta por Yann LeCun en 1998 y ha sido utilizada 
+en aplicaciones de reconocimiento de dígitos escritos a mano, 
+como el conjunto de datos MNIST. En este laboratorio,
+se usa una base de datos de imagenes conocida como SHVN, que contiene
+imagenes de los numeros que identifican las casas. Los resultados tienen 
+como objetivo evaluar las fortalezas y limitaciones de la red LeNet en su 
+capacidad de predicción cuando se lee un numero por medio de camara.
+\end{abstract}
+
+\begin{IEEEkeywords}
+backpropagation, cnn, redes neuronales, tratamiento de imagen, deep learning.
+\end{IEEEkeywords}
+
+% Secciones del informe
+\section{Introducción}
+\IEEEPARstart{E}{n} este laboratorio, 
+se aborda el estudio de la red neuronal convolucional LeNet, 
+una arquitectura pionera en el area del deep learning y las CNN. 
+El enfoque del laboratorio es conocer de forma teórica todo lo 
+relacionado a leNet y evaluar cómo esta red funciona para la clasificación
+y predicción diferentes tipos de entradas, como números, letras y algunos
+simbolos contenidos en el codigo ASCII. A lo largo de la aplicación, 
+se evaluará la diferencia entre el entrenamiento de la red LeNet 5 y su 
+rendimiento con el uso de la función de activación 
+\textbf{Tangente Híperbolica} y el optimizador de gradiente descendiente
+en comparación con el entrenamiento usando \textbf{ReLU} para capas
+ocultas y el metódo Adam para la optimización de la red. Por otro lado,
+se evaluará el rendimiento de la red LeNet 5 en la predicción de números
+escritos a mano y números capturados por cámara.
+
+
+% Inclusión de capítulos
+\input{chapters/TheoreticalFoundations}
+\input{chapters/Methodology}
+\input{chapters/Results}
+\input{chapters/Conclusion.tex}
+
+% Bibliografía
+\newpage
+\bibliographystyle{IEEEtran}
+\bibliography{bibliography/bibliography}
+
+\end{document}

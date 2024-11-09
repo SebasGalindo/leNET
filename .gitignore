@@ -1,0 +1,21 @@
+# avoid data folder 
+data/extra_32x32.mat
+data/test_32x32.mat
+data/train_32x32.mat
+
+# avoid numbers folder
+Resources/numbers/
+
+# documents
+Document_Resources/_minted-main/
+Document_Resources/main.aux
+Document_Resources/main.log
+Document_Resources/main.fls
+Document_Resources/main.bbl
+Document_Resources/main.blg
+Document_Resources/main.fdb_latexmk
+Document_Resources/main.synctex.gz
+Document_Resources/main.pdf
+
+# avoid venv folder
+venv/
