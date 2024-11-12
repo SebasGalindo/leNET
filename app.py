@@ -126,7 +126,7 @@ def add_sub_menu(window):
     document_img = ctk.CTkImage(light_image=document_img, dark_image=document_img, size=(width, height))
     document_label = ctk.CTkLabel(master=sub_menu_frame, image=document_img, bg_color="#00482b", font=title_font, compound="center", text= "")
     document_label.grid(row=0, column=5, columnspan=1, sticky="nsew", padx = 10, pady = 2)
-    document_label.bind("<Button-1>", lambda e: open_link(link="youtube.com"))
+    document_label.bind("<Button-1>", lambda e: open_link(link="https://github.com/SebasGalindo/leNET/blob/main/leNet_IEEE.pdf"))
     document_label.configure(cursor="hand2")
     
     # presentation buttonw
@@ -137,7 +137,7 @@ def add_sub_menu(window):
     presentation_img = ctk.CTkImage(light_image=presentation_img, dark_image=presentation_img, size=(width, height))
     presentation_label = ctk.CTkLabel(master=sub_menu_frame, image=presentation_img, font=title_font, compound="center", text= "")
     presentation_label.grid(row=0, column=6, columnspan=1, sticky="nsew", padx = 10, pady = 2)
-    presentation_label.bind("<Button-1>", lambda e: open_link(link="google.com"))
+    presentation_label.bind("<Button-1>", lambda e: open_link(link="https://mailunicundiedu-my.sharepoint.com/:p:/g/personal/johnsgalindo_ucundinamarca_edu_co/EUWu3sefAK5Cg8CbzLQs0w8BaBSB22--kpLRO-UN5HaUWg?e=tpfgKy"))
     presentation_label.configure(cursor="hand2")
     
     # github button
@@ -148,7 +148,7 @@ def add_sub_menu(window):
     github_img = ctk.CTkImage(light_image=github_img, dark_image=github_img, size=(width, height))
     github_label = ctk.CTkLabel(master=sub_menu_frame, image=github_img, bg_color="#00482b", font=title_font, compound="center", text= "")
     github_label.grid(row=0, column=7, columnspan=1, sticky="nsew", padx = 10, pady = 2)
-    github_label.bind("<Button-1>", lambda e: open_link(link="github.com"))
+    github_label.bind("<Button-1>", lambda e: open_link(link="https://github.com/SebasGalindo/leNET"))
     github_label.configure(cursor="hand2")
 
 def train_model():
@@ -403,7 +403,7 @@ def mostrar_video():
         p, digit = e.predict(roi)
         
         # Mostrar la predicción en la imagen
-        cv2.putText(frame, f'Digito: {digit}', (100, 90), cv2.FONT_HERSHEY_SIMPLEX, 1, (216, 29, 69), 2)
+        cv2.putText(frame, f'Digito: {digit}', (100, 80), cv2.FONT_HERSHEY_DUPLEX,2, (216, 29, 69), 2)
         
         if ret:
             # Convertir el frame a RGB y luego a formato de Tkinter
